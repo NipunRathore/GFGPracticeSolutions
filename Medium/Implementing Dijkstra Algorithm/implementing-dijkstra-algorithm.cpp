@@ -31,14 +31,17 @@ class Solution
             
             for (auto nbr : adj[topNode])
             {
-                // here adj is 2-d matrix not list and map 
+                // here adj is vector<vector<int> > and not unordered_map<int, list<pair<int, int> > > 
                 // nbr is a vector itself 
                 int adjNode = nbr[0] ; 
                 int edgeWeight = nbr[1] ; 
+                // perform relaxation 
                 if (nodeDist + edgeWeight < distance[adjNode])
                 {
+                    // update distance of nbr node
                     distance[adjNode] = nodeDist + edgeWeight ; 
                     
+                    // store record for the newly updated distance, node in the priority queue
                     pq.push({distance[adjNode], adjNode}) ;
                 }
             }
