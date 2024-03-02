@@ -6,7 +6,7 @@ using namespace std;
 // } Driver Code Ends
 class Solution{
     public:
-    int firstElementKTime(int a[], int n, int k)
+    int firstElementKTime(int n, int k, int a[])
     {
         unordered_map<int, int> mp ;
         for (int i = 0 ; i < n ; i ++)
@@ -35,7 +35,7 @@ int main() {
 	        cin >> a[i];
 	    }
 	    Solution ob;
-	    cout<<ob.firstElementKTime(a, n, k)<<endl;
+	    cout<<ob.firstElementKTime(n, k, a)<<endl;
 	}
 	
 	return 0;
