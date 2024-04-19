@@ -7,12 +7,11 @@ class Solution{
 	
 	
 	public:
-	vector<long long> findMissing(long long A[], long long B[],  
-                 int N, int M) 
+	vector<int> findMissing(int A[], int B[], int N, int M) 
 	{ 
 	    // Your code goes here
-	    vector<long long> ans ; 
-	    unordered_map<long long, int> mp ; 
+	    vector<int> ans ; 
+	    unordered_map<int, int> mp ; 
 	    
 	    for (int i = 0 ; i < M ; i ++)
 	    {
@@ -45,13 +44,13 @@ int main()
         cin>>n;
         int m;
         cin>>m;
-        long long a[n];
-        long long b[m];
+        int a[n];
+        int b[m];
         for(int i=0;i<n;i++)
         cin>>a[i];
         for(int i=0;i<m;i++)
         cin >> b[i];
-        vector<long long> ans;
+        vector<int> ans;
         
 
         Solution ob;
